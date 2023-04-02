@@ -1,1 +1,1 @@
-# react-full-doc
+# react-doc
