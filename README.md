@@ -59,7 +59,33 @@ import { Navigate } from "react-router-dom";
               <Routes>
                 <Route path="/child" element={ <p>Hello child</p>}></Route>
               </Routes>
+              
+    
+######  rules 2 : 
 
+        <Route path="/hello/*" element={<Hello></Hello>}>
+                  <Route path="child" element={<p>Hello child</p>}></Route>
+        </Route>
+        
+        import { Outlet } from "react-router-dom";
+        
+         <Outlet></Outlet>
+         
+         
+## back Process 
+import { useNavigate } from "react-router-dom";
+
+    useHistory die now useNavigate
+    
+    const navigate = usenavigate()
+    
+    navigate("app")
+    navigate(-1)
+    
+    
+    
+    
+         
 
 
        
