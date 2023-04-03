@@ -25,4 +25,15 @@ import {BrowserRouter as Router , Routes , Route} from "react-router-dom"
         <Route>
         </Routes>
 
+import { Navigate } from "react-router-dom";
+
+<Navigate to="/dashboard" replace={true} />
+
+
+<Routes>
+        <Route path="/" element={<Navigate to="/app" replace={true} />}></Route>
+        <Route path="/app" element={<p className="text-light">app</p>}></Route>
+</Routes>
+
+
        
