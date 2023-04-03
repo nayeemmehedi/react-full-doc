@@ -1,33 +1,45 @@
-import axios from "axios";
+    import axios from "axios";
 
-const instance = axios.create({
-  baseURL: "http://localhost:4545/api/v1",
-  headers: {
-    Authorization: `Bearer ${"YOUR_ACCESS_TOKEN"}`,
-  },
-});
+    const instance = axios.create({
+      baseURL: "http://localhost:4545/api/v1",
+      headers: {
+        Authorization: `Bearer ${"YOUR_ACCESS_TOKEN"}`,
+      },
+    });
 
-class axiosHttp {
-  async getInstance(body = "/") {
-    return await instance.get(`/admin` + body);
-  }
+NOW CLASS
 
-  // axios.delete(`http://localhost:8001/persons/${id}`)
+    class axiosHttp {
+      async getInstance(body = "/") {
+        return await instance.get(`/admin` + body);
+      }
 
-  async PostInstance(path = "/", body) {
-    return await instance.post(`/admin` + path, body);
-  }
+      // axios.delete(`http://localhost:8001/persons/${id}`)
 
-  async DeleteInstance(id) {
-    return await instance.delete(`/admin/` + id);
-  }
+      async PostInstance(path = "/", body) {
+        return await instance.post(`/admin` + path, body);
+      }
 
-  //   axios
-  //   .patch('https://jsonplaceholder.typicode.com/posts/1', userToPatch)
+      async DeleteInstance(id) {
+        return await instance.delete(`/admin/` + id);
+      }
 
-  async patchInstance(id, body) {
-    return await instance.patch(`/admin/` + id, body);
-  }
-}
+      //   axios
+      //   .patch('https://jsonplaceholder.typicode.com/posts/1', userToPatch)
 
-export default new axiosHttp();
+      async patchInstance(id, body) {
+        return await instance.patch(`/admin/` + id, body);
+      }
+    }
+
+    export default new axiosHttp();
+    
+    
+  HOW TO CALL IT 
+  
+     const handleClick = async () => {
+     
+        const allvalue = await axiosHttp.getInstance(`?age=${value1}`);
+
+        setValue(allvalue?.data);
+      };
