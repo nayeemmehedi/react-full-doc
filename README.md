@@ -1,6 +1,6 @@
 # react-router-6
 
-//index js 
+##### $index js 
 
         import { BrowserRouter } from "react-router-dom";
 
@@ -40,10 +40,26 @@ import { Navigate } from "react-router-dom";
    import { NavLink } from "react-router-dom";
              
                 
-  <NavLink to ="/app"  className={(info)=>info.isActive ? "text-danger":"text-light"}>App</NavLink>
+       <NavLink to ="/app"  className={(info)=>info.isActive ? "text-danger":"text-light"}>App</NavLink>
   
   
-  ### child router
+  ## child router
+  
+ ######  rules 1 : 
+  
+  app.js 
+  
+            <Routes>
+              
+                <Route path="/hello/*" element={<Hello></Hello>}></Route>
+              </Routes>
+              
+   Hello.js
+   
+              <Routes>
+                <Route path="/child" element={ <p>Hello child</p>}></Route>
+              </Routes>
+
 
 
        
