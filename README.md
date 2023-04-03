@@ -27,13 +27,23 @@ import {BrowserRouter as Router , Routes , Route} from "react-router-dom"
 
 import { Navigate } from "react-router-dom";
 
-<Navigate to="/dashboard" replace={true} />
+                <Navigate to="/dashboard" replace={true} />
 
 
-<Routes>
-        <Route path="/" element={<Navigate to="/app" replace={true} />}></Route>
-        <Route path="/app" element={<p className="text-light">app</p>}></Route>
-</Routes>
+                <Routes>
+                        <Route path="/" element={<Navigate to="/app" replace={true} />}></Route>
+                        <Route path="/app" element={<p className="text-light">app</p>}></Route>
+                </Routes>
+   
+   
+   
+   import { NavLink } from "react-router-dom";
+             
+                
+  <NavLink to ="/app"  className={(info)=>info.isActive ? "text-danger":"text-light"}>App</NavLink>
+  
+  
+  ### child router
 
 
        
