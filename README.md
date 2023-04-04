@@ -1,6 +1,4 @@
-# react-doc
-
-basic synchronous
+### basic synchronous
 
       import React, { createContext, useContext } from 'react';
 
@@ -27,7 +25,7 @@ basic synchronous
       export default App;
       
       
-  basic asynchronous
+ ### basic asynchronous
   
 
       import React, { createContext, useState, useEffect } from 'react';
