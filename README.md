@@ -41,3 +41,34 @@ useAuth.js
               }
               
   #### 2nd way to make private router
+  
+  
+  app.js
+  
+  
+     <Route
+            path="hello/*"
+            element={
+              <PrivateRouteMade>
+                <Hello></Hello>
+              </PrivateRouteMade>
+            }
+          >
+            <Route path="child" element={<ChildValue></ChildValue>}></Route>
+            <Route path="child1" element={<p>hello</p>}></Route>
+          </Route>
+
+
+PrivateRouteMade.js
+   
+
+         import { Navigate, Outlet } from "react-router-dom";
+         import useAuth from ".././hook/useAuth.js";
+         import Login from "../value/Login.js";
+
+         export default function PrivateRouteMade({ children }) {
+          const auth = useAuth();
+
+          return auth ? children : <Navigate to="/login"></Navigate>;
+         }
+
