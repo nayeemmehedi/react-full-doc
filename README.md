@@ -1,5 +1,22 @@
 # react-router-6
 
+## basic example
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+function App() {
+  return (
+   
+      <Routes>
+        <Route path="/" element={<h1>Hello World</h1>}></Route>
+      </Routes>
+  
+  );
+}
+
+export default App;
+
+
 ##### $index js 
 
         import { BrowserRouter } from "react-router-dom";
