@@ -87,6 +87,59 @@ import { Navigate } from "react-router-dom";
         import { Outlet } from "react-router-dom";
         
          <Outlet></Outlet>
+
+
+
+         example 
+
+         app.js 
+         
+         import { BrowserRouter, Routes, Route } from "react-router-dom";
+          import ViewNew from "./components/ViewNew";
+          import ChildView from "./components/ChildView";
+          
+          function App() {
+            return (
+              <Routes>
+                <Route path="/parents/*" element={<ViewNew></ViewNew>}>
+                  <Route path="child" element={<ChildView></ChildView>}></Route>
+                </Route>
+              </Routes>
+            );
+          }
+          
+          export default App;
+
+          parent.js
+
+          import React from 'react'
+            import { Outlet } from "react-router-dom";
+            
+            export default function ViewNew() {
+              return (
+                <div>
+            
+                    <h1> ViewNew</h1>
+                    <Outlet></Outlet>
+                   
+                    
+                    </div>
+              )
+            }
+
+            child.js
+
+            import React from 'react'
+
+              function ChildView() {
+                return (
+                  <div>Child</div>
+                )
+              }
+              
+              export default ChildView
+
+
          
          
 ## back Process 
