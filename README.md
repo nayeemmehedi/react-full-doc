@@ -17,6 +17,10 @@ function App() {
 export default App;
 
 
+#### Link to 
+ <Link to="/app"> something </Link>
+
+
 ##### $index js 
 
         import { BrowserRouter } from "react-router-dom";
