@@ -155,26 +155,26 @@ import { useNavigate } from "react-router-dom";
 
 ### final code 
 
-
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./page/Home";
-import Value from "./data/Element";
-
-function App() {
-  console.log(Value);
-  return (
-    <BrowserRouter>
-      <Routes>
-        {Value?.map((v, index) => (
-          <Route key={index} path={v?.path} element={<v.e />} />
-        ))}
-      </Routes>
-    </BrowserRouter>
-  );
-}
-
-export default App;
+      
+      import React from "react";
+      import { BrowserRouter, Routes, Route } from "react-router-dom";
+      import Home from "./page/Home";
+      import Value from "./data/Element";
+      
+      function App() {
+        console.log(Value);
+        return (
+          <BrowserRouter>
+            <Routes>
+              {Value?.map((v, index) => (
+                <Route key={index} path={v?.path} element={<v.e />} />
+              ))}
+            </Routes>
+          </BrowserRouter>
+        );
+      }
+      
+      export default App;
 
     
     
