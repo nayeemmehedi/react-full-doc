@@ -1,6 +1,9 @@
 # react-router-6
 
+ npm i react-router-dom
+
 ## basic example
+
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
